@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // undefined和null的区别
+        // undefined表示变量声明了,但是没有赋值,转成数值是NaN
+        // null表示变量声明了,并且赋值为null,转成数值是0
+        var a;
+        console.log(a); //undefined
+        console.log(typeof a); //undefined
+        var b = null;
+        console.log(b); //null
+        console.log(typeof b); //object
+        // symbol
+        var c = Symbol();
+        console.log(c);
+        console.log(typeof c);
+        // 用处
+        var obj = {
+            a: 1,
+            b: 2,
+            c: 3
+                // 想再添加一个a属性
+        }
+        var a = Symbol('a');
+        obj[a] = 4;
+        console.log(obj);
+    </script>
+
+</body>
+
+</html>

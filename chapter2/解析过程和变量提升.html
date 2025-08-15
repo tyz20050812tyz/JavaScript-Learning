@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 变量提升：
+        // 变量提升是指在代码执行之前，会先将所有的变量声明提升到代码的顶部
+        // 变量提升的原理是：js引擎会将所有的变量声明提升到代码的顶部，但是不会提升变量的赋值
+        // 变量提升的作用是：可以在变量声明之前使用变量
+        // 变量提升的注意事项：
+        // 1.变量提升只提升声明，不提升赋值
+        // 2.变量提升是发生在函数作用域和全局作用域的
+        // 3.变量提升是发生在代码执行之前的
+        // 我写的代码：
+        console.log(a); //undefined，不会报错
+        a = 1;
+        console.log(a); //1
+        var a;
+        // 实际执行的代码：
+        // var a;
+        // console.log(a); //undefined
+        // a = 1;
+        // console.log(a); //1
+        // 效果：
+        function fn() {
+            if (true) {
+                console.log(a); //undefined
+            }
+            var a = 1;
+        }
+        // 如果没有变量提升，fn()函数执行时，a是没有声明的，会报错
+        fn();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = '    hello world     ';
+        // 字符串长度
+        console.log(str.length); //20
+        //去除空格
+        console.log(str.trim()); //
+        // 字符串的拼接
+        console.log(str + '你好'); //hello world你好
+        // 字符串的替换
+        console.log(str.replace('hello', 'hi')); //hi world
+        // 字符串的截取
+        console.log(str.substring(0, 5)); //hello
+        console.log(str.substr(0, 5)); //hello
+        // 字符串的转换
+        console.log(str.toUpperCase()); //HELLO WORLD
+        console.log(str.toLowerCase()); //hello world
+        // 字符串的查找
+        console.log(str.indexOf('l')); //2
+        console.log(str.indexOf('l', 3)); //2 ,从第三个开始查找
+        console.log(str.lastIndexOf('l')); //9
+        console.log(str.search('l')); //2
+        console.log(str.match('l')); //['l', index: 2, input: 'hello world', groups: undefined]
+        // 字符串的截取
+        console.log(str.slice(0, 5)); //hello
+        console.log(str.substring(0, 5)); //hello
+        console.log(str.substr(0, 5)); //hello
+    </script>
+
+</body>
+
+</html>

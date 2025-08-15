@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 数字的声明
+        var a = 10;
+        // 数字的类型
+        console.log(typeof a);
+        // 数字对象声明
+        var aa = new Number(10);
+        console.log(aa);
+        // 数字的方法
+        console.log(aa.toString()); //数字转字符串
+        console.log(aa.toFixed(2)); //保留2位小数
+        console.log(Number.isInteger(a)); //判断是否为整数
+        var c = '123.34234234';
+        console.log(Number(c)); //字符串转换成Number
+        console.log(parseInt(c)); //字符串转换成整数
+        console.log(parseFloat(c)); //字符串转换成浮点数
+        console.log(isNaN(c)); //判断是否为NaN
+        // 可以用来判断是否为数字
+        var str = 'sdadads';
+        console.log(Number(str)); //NaN
+        console.log(isNaN(str)); //false,表示不是数字
+        console.log(Math.random()); //随机数
+    </script>
+
+</body>
+
+</html>

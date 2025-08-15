@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 布尔值的声明
+        var a = true;
+        // 布尔值的类型
+        console.log(typeof a);
+        // 隐式转换
+        console.log(Boolean('')); //false
+        console.log(Boolean('hello')); //true
+        console.log(Boolean(123)); //true
+        console.log(Boolean(0)); //false
+        console.log(Boolean([])); //true,空数组,空数组
+        console.log(Boolean([1, 2, 3])); //true,非空数组
+        console.log(Boolean({})); //true,空对象
+        console.log(Boolean({
+            a: 1,
+            b: 2
+        })); //true,非空对象
+        console.log(Boolean(NaN)); //false
+        console.log(Boolean(null)); //false
+        console.log(Boolean(undefined)); //false
+        // 数组对比的时候
+        console.log([12, 123, 123] == true); //false
+        // 数组对比的时候,数组会先调用toString方法,然后再对比
+        // 空数组转成字符串,结果是''，非空数组转成字符串
+        // 显示转换
+        var str = '';
+        console.log(!!str); //false
+        console.log(!!'false'); //true
+        console.log(!!'0'); //false
+        console.log(!!'null'); //true
+        console.log(!!'undefined'); //true
+    </script>
+
+</body>
+
+</html>

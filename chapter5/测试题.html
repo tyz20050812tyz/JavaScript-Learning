@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = '张三，李四，小明，小红'
+            // 1.将字符串转换为数组，split将字符串用，隔开的变成数组元素
+        var arr = str.split('，')
+        console.log(arr);
+
+        function search(name, arr) {
+            var index = arr.indexOf(name);
+            if (index == -1) {
+                document.write('没有这个人')
+                alert('没有这个人')
+            } else {
+                document.write(name + '这个人的下标是' + index)
+            }
+        }
+        search('张三', arr);
+        var list = [23, 34, 45, 56, 78];
+        var num = 47;
+        var index = 0;
+        for (var i = 0; i < list.length; i++) {
+            if (list[i] > num) {
+                index = i;
+                break;
+            }
+        }
+        // 在index位置插入num
+        list.splice(index, 0, num);
+        console.log(list);
+    </script>
+
+</body>
+
+</html>

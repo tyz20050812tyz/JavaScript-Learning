@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 数组的基本操作
+        // 1.数组的定义
+        var arr = [1, 2, 3, 4, 5];
+        // 和c++的数组不同的是 javascript的数组可以存储不同类型的元素
+        // 但是操作数组的方法是一样的
+        //    增
+        arr[5] = 6;
+        // 也可以使用push方法向数组的末尾添加元素
+        arr.push(6);
+        // 还可以使用unshift方法向数组的开头添加元素
+        arr.unshift(0);
+        console.log(arr);
+        //    删
+        arr.pop();
+        // 还可以使用shift方法向数组的开头删除元素
+        arr.shift();
+        console.log(arr);
+        //    改
+        arr[0] = 100;
+        console.log(arr);
+        //    查
+        console.log(arr[0]);
+        //    遍历
+        for (var i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+    </script>
+</body>
+
+</html>

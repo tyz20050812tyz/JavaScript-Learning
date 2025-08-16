@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 数组的进阶操作方法
+        // 1.数组的合并
+        var arr1 = [1, 2, 3];
+        var arr2 = [4, 5, 6];
+        var arr3 = arr1.concat(arr2);
+        console.log(arr3);
+        // 2.数组的截取 
+        var arr4 = arr3.slice(0, 3);
+        // 第一个参数 截取的起始位置
+        // 第二个参数 截取的结束位置
+        // 注意： 不包含结束位置的元素
+        console.log(arr4);
+        // 3.数组的截取 并删除
+        arr3 = arr1.concat(arr2);
+        console.log(arr3);
+        var arr5 = arr3.splice(0, 3);
+        console.log(arr5);
+        arr3 = arr1.concat(arr2);
+        console.log(arr3);
+        arr3.splice(1, 2, 100, 1);
+        // 第一个参数 截取的起始位置
+        // 第二个参数 截取的个数
+        // 第三个参数表示替换的元素
+        // 还可以用作插入操作：
+        list.splice(index, 0, num);
+        console.log(arr3);
+        // 4.转换成字符串
+        var str = arr3.toString();
+        console.log(str);
+        // 还可以使用join方法
+        var str2 = arr3.join('-'); //使用-连接
+        console.log(str2);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. 字面量创建对象
+        var car = {
+                name: '奔驰C63',
+                price: 1000000,
+                color: '黑色',
+                brand: '奔驰',
+                run: function() {
+                    console.log('我是奔驰');
+                }
+            }
+            // 2. 构造函数创建对象，工厂模式
+        function Car(name, price, color, brand) {
+            this.name = name;
+            this.price = price;
+            this.color = color;
+            this.brand = brand;
+            this.run = function() {
+                console.log('我是' + this.brand + '的' + this.name);
+            }
+        }
+        var car1 = new Car('奔驰C63', 1000000, '黑色', '奔驰');
+        // 3. 构造函数创建对象
+        var car2 = new Object();
+        car2.name = '奔驰C63';
+        car2.price = 1000000;
+        car2.color = '黑色';
+        car2.brand = '奔驰';
+        car2.run = function() {
+            console.log('我是' + this.brand + '的' + this.name);
+        }
+    </script>
+</body>
+
+</html>

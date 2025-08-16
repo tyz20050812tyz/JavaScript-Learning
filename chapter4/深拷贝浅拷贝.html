@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 深拷贝：拷贝的是值，而不是地址，深拷贝是完全拷贝，不会改变原对象
+        // 浅拷贝：拷贝的是地址，而不是值,改变car2的属性，car的属性也会改变
+        var car = {
+            name: '奔驰C63',
+            price: 1000000,
+            color: '黑色',
+            brand: '奔驰',
+            run: function() {
+                console.log('我是奔驰');
+            }
+        }
+        var car2 = car;
+        console.log(car2); //{name: '奔驰C63', price: 1000000, color: '黑色', brand: '奔驰', run: ƒ}
+        car2.name = '奔驰C63S';
+        console.log(car2); //{name: '奔驰C63S', price: 1000000, color: '黑色', brand: '奔驰', run: ƒ}
+        console.log(car); //{name: '奔驰C63S', price: 1000000, color: '黑色', brand: '奔驰', run: ƒ}
+        // 深拷贝
+        var car3 = JSON.parse(JSON.stringify(car));
+
+        // var car3 = {
+        //     name: car.name,
+        //     price: car.price,
+        //     color: car.color,
+        //     brand: car.brand,
+        //     run: car.run
+        // }
+        console.log(car3); //{name: '奔驰C63S', price: 1000000, color: '黑色', brand: '奔驰', run: ƒ}
+        car3.name = '奔驰C63';
+        console.log(car3); //{name: '奔驰C63', price: 1000000, color: '黑色', brand: '奔驰', run: ƒ}
+        console.log(car); //{name: '奔驰C63S', price: 1000000, color: '黑色', brand: '奔驰', run: ƒ}
+    </script>
+
+</body>
+
+</html>

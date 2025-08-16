@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var car = {
+            // 键值对
+            name: '奔驰C63',
+            price: 1000000,
+            color: '黑色',
+            brand: '奔驰',
+            // 对象中的函数叫方法
+            // 用this访问自己的属性
+            run: function() {
+                console.log('我是' + this.brand + '的' + this.name);
+            },
+            speak: function() {
+                // 用this调用自己的方法
+                this.run();
+                console.log('我在说话');
+            }
+
+        }
+        car.run();
+        car.speak();
+    </script>
+</body>
+
+</html>

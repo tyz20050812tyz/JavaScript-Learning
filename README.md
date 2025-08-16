@@ -16,12 +16,20 @@ JS学习/
 │   ├── 变量声明.html                    # 变量声明与作用域
 │   ├── 引入方式注释.html                # JavaScript 引入方式与注释规范
 │   └── 解析过程和变量提升.html          # JavaScript 解析过程和变量提升机制
-└── chapter3/                            # JavaScript 数据类型
-    ├── 两种数据类型.html                # JavaScript 数据类型概述
-    ├── number.html                      # 数字类型详解
-    ├── string.html                      # 字符串类型详解
-    ├── boolean.html                     # 布尔类型详解
-    └── undefined_Null_Symbol.html       # undefined、Null 和 Symbol 类型详解
+├── chapter3/                            # JavaScript 数据类型
+│   ├── 两种数据类型.html                # JavaScript 数据类型概述
+│   ├── number.html                      # 数字类型详解
+│   ├── string.html                      # 字符串类型详解
+│   ├── boolean.html                     # 布尔类型详解
+│   └── undefined_Null_Symbol.html       # undefined、Null 和 Symbol 类型详解
+└── chapter4/                            # JavaScript 对象
+    ├── js对象基本形式.html              # JavaScript 对象基本形式
+    ├── 访问自己的属性.html              # 访问自己的属性
+    ├── 对象的操作.html                  # 对象的操作
+    ├── 创建对象的方法.html              # 创建对象的方法
+    ├── 构造函数的参数.html              # 构造函数的参数
+    ├── new关键字的作用.html             # new关键字的作用
+    └── 深拷贝浅拷贝.html               # 深拷贝浅拷贝
 ```
 
 ## 📚 学习内容
@@ -36,6 +44,15 @@ JS学习/
 - 🔢 基本数据类型详解
 - 📎 引用数据类型详解
 - 🔄 类型转换与检查
+
+### 📙 第四章: JavaScript 对象
+- 🧱 对象基本形式
+- 🔑 访问对象属性
+- 🛠️ 对象操作方法
+- 🏗️ 创建对象的方式
+- 🎯 构造函数与参数
+- ✨ new关键字作用
+- 📦 深拷贝与浅拷贝
 
 ## 🌟 项目特点
 

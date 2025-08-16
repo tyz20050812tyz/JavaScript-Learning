@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.返回一个对象
+        // 2.把this指向返回的对象
+        function Car(obj) {
+            this.name = obj.name;
+            this.price = obj.price;
+            this.color = obj.color;
+            this.brand = obj.brand;
+        }
+        var car1 = Car({
+                name: '奔驰C63',
+                price: 1000000,
+                color: '黑色',
+                brand: '奔驰'
+            })
+            // 没有返回值，所以输出undefined 
+        console.log(car1); //undefined
+        // 返回一个对象，所以输出不是undefined
+        var car2 = new Car({
+            name: '奔驰C63',
+            price: 1000000,
+            color: '黑色',
+            brand: '奔驰'
+        })
+        console.log(car2); //Car {name: '奔驰C63', price: 1000000, color: '黑色', brand: '奔驰'}
+        // new的底层逻辑：
+        // 1.创建一个空对象
+        // 2.把this指向这个空对象
+        // 3.执行函数体
+        // 4.返回这个对象
+    </script>
+</body>
+
+</html>

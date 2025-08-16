@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 构造函数
+        // 1.固定参数
+        function Car(name, price, color, brand) {
+            this.name = name;
+            this.price = price;
+            this.color = color;
+            this.brand = brand;
+        }
+        // 2.对象类型参数
+        function Car(obj) {
+            this.name = obj.name;
+            this.price = obj.price;
+            this.color = obj.color;
+            this.brand = obj.brand;
+        }
+        // 实例
+        var car1 = new Car('奔驰C63', 1000000, '黑色', '奔驰');
+        var car2 = new Car({
+                name: '奔驰C63',
+                price: 1000000,
+                color: '黑色',
+                brand: '奔驰'
+            })
+            // 其实没啥区别
+    </script>
+</body>
+
+</html>

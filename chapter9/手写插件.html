@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        (function() {
+            // 1. 声明一个构造函数
+            function Sum() {}
+
+            // 2. 给它加实例方法
+            Sum.prototype.add = function(a, b) {
+                return a + b;
+            };
+
+            // 3. 关键：把构造函数挂到全局对象
+            window.Sum = Sum;
+        })();
+        // 实例化
+        var sum = new Sum();
+        document.write(sum.add(1, 2));
+        // | 位置      | 挂载前          | 挂载后                                 |
+        // | -------- | ------------    | ------------------------------------ |
+        // | IIFE 内部 | ✅ 能访问 `Sum`  | ✅ 能访问 `Sum`                          |
+        // | IIFE 外部 | ❌ 访问不到 `Sum` | ✅ `window.Sum` 存在，任何地方都能 `new Sum()` |
+    </script>
+</body>
+
+</html>

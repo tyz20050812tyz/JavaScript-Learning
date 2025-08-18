@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 闭包
+        // 闭包就是有权访问另一个函数作用域中的变量的函数
+        function fun1() {
+            var a = 1;
+
+            function fun2() {
+                a++;
+                document.write(a);
+            }
+            return fun2;
+        }
+        // 调用fun1函数返回的是fun2函数
+        // 调用fun2函数时，会先查找fun2函数的作用域
+        // 如果没有找到，会去fun1函数的作用域中查找
+        // 这就是闭包
+
+        var res = fun1();
+        res();
+        // 真正“不会被销毁”的是外部函数的作用域链，而不是函数本身。
+        // 正常我们把a放在外部，但是会被修改
+        // 而现在我们首先需要调用一下fun1函数
+        // 调用fun1函数时，会创建一个新的作用域
+        // 在这个作用域中，用户无法修改a变量
+        // 而fun2函数的作用域中没有a变量
+        // 所以会去fun1函数的作用域中查找
+        // 找到a变量，就会把a变量的值赋值给fun2函数的作用域中的a变量
+        // 所以a变量就不会被修
+        //只要内部函数还存在引用，垃圾回收机制就不会回收外部函数的作用域。
+        // 真正“不会被销毁”的是外部函数的作用域链，而不是函数本身。
+    </script>
+</body>
+
+</html>

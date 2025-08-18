@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var json = {
+                name: '张三',
+                age: 18,
+                sex: '男',
+                hobby: ['篮球', '足球', '跑步']
+
+            }
+            // 序列化,转换成JSON
+        var a = JSON.stringify(json);
+        document.write(a);
+        // 反序列化,转换成对象格式
+        var b = JSON.parse(a);
+        document.write(b);
+    </script>
+</body>
+
+</html>

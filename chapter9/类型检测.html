@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // typeof
+        var a = 10;
+        var b = 'hello';
+        var c = true;
+        var d = null;
+        var e = undefined;
+        var f = {};
+        var g = [];
+        var h = function() {};
+        var aa = new Number(10);
+        var bb = new String('hello');
+        var cc = new Boolean(true);
+        var dd = new Date();
+        var ee = new Object();
+        document.writeln(typeof b); //string
+        document.writeln(typeof c); //boolean
+        document.writeln(typeof d); //object
+        document.writeln(typeof e); //undefined
+        document.writeln(typeof f); //object
+        document.writeln(typeof g); //object
+        document.writeln(typeof h); //function
+        // instanceof,只能判断“对象”之间的原型链关系,可以区分对象和数组
+        // instanceof 只能判断“对象”之间的原型链关系，而 number、string 这些字面量是「原始值」（primitive），根本不是对象，自然没法用 instanceof
+        // 把原始值“装箱”后就能通过 instanceof 来判断了
+        document.writeln(aa instanceof Number); //true
+        document.writeln(bb instanceof String); //true
+        document.writeln(cc instanceof Boolean); //true
+        document.writeln(dd instanceof Date); //true
+        document.writeln(ee instanceof Object); //true
+        document.writeln(f instanceof Object); //true
+        document.writeln(g instanceof Array); //true
+        document.writeln(h instanceof Function); //true
+    </script>
+</body>
+
+</html>

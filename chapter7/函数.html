@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 函数
+        // 1. 函数的定义
+        function fun() {
+            document.write('hello world')
+
+        }
+        fun();
+        // 2. 函数的调用
+        // 3. 函数的参数
+        function fun1(a, b) {
+            document.write(a + b)
+        }
+        fun1(1, 2);
+        // a,b 形参
+        // 1,2 实参
+        // 4. 函数的返回值
+        function fun2(a, b) {
+            return a + b;
+        }
+        // return只能在函数中使用
+        var res = fun2(1, 2);
+        document.write(res);
+
+        // 5. 函数的作用域
+        // 6. 函数的递归
+        // 立即执行函数
+        (function(a, b) {
+            document.write('hello world')
+            document.write(a + b)
+
+        })(1, 2);
+    </script>
+
+</body>
+
+</html>

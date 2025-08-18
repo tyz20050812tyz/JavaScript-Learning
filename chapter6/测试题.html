@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1-100以内7的倍数的个数与总和
+        var count = 0;
+        var num = 0;
+        for (var i = 0; i <= 100; i++) {
+            if (i % 7 == 0) {
+                count += i;
+                num++;
+            }
+        }
+
+        document.write(count, num)
+        document.write('<br>')
+            // 打印5*5的矩阵
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 5; j++) {
+                document.write('*');
+            }
+            document.write('<br>')
+        }
+        // 5行的金字塔
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 5 - i; j++) {
+                document.write(' ');
+            }
+            for (var j = 0; j < 2 * i + 1; j++) {
+                document.write('*');
+            }
+            document.write('<br>')
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fun1() {
+            this.a = 150;
+        }
+        // fun1是函数，而new出来的f是对象
+        // fun1 永远是函数，f 是由 fun1 构造出来的对象实例；两者身份不同，但 f 内部通过原型链与 fun1 关联。
+        f = new fun1();
+        document.write(f.__proto__);
+        document.write(fun1.prototype);
+        // 函数有 prototype 属性，对象没有。
+        // 对象有 __proto__ 属性，函数没有。
+        // 函数是对象，对象不一定是函数；函数多了 [[Call]]，还能 new 别人
+        // 想调用？必须是函数。
+        // 想挂属性？两者都行。
+        // f->fun1->Object->null
+        fun1.prototype.a = 100;
+        document.write(f.a); //150
+        // 每一个对象都拥有一个原型对象，用proto指针指向它的原型对象
+        // 而原型对象也可以有原型，最终只想null
+    </script>
+</body>
+
+</html>

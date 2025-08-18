@@ -22,19 +22,36 @@ JS学习/
 │   ├── string.html                      # 字符串类型详解
 │   ├── boolean.html                     # 布尔类型详解
 │   └── undefined_Null_Symbol.html       # undefined、Null 和 Symbol 类型详解
-└── chapter4/                            # JavaScript 对象
-    ├── js对象基本形式.html              # JavaScript 对象基本形式
-    ├── 访问自己的属性.html              # 访问自己的属性
-    ├── 对象的操作.html                  # 对象的操作
-    ├── 创建对象的方法.html              # 创建对象的方法
-    ├── 构造函数的参数.html              # 构造函数的参数
-    ├── new关键字的作用.html             # new关键字的作用
-    └── 深拷贝浅拷贝.html               # 深拷贝浅拷贝
-└── chapter5/                            # JavaScript 数组
-    ├── 操作数组的基本操作.html          # 数组基本操作实践
-    ├── 数组的基本操作.html              # 数组基本操作知识
-    ├── 数组进阶操作方法.html          # 数组进阶操作方法
-    └── 测试题.html                      # 数组知识测试
+├── chapter4/                            # JavaScript 对象
+│   ├── js对象基本形式.html              # JavaScript 对象基本形式
+│   ├── 访问自己的属性.html              # 访问自己的属性
+│   ├── 对象的操作.html                  # 对象的操作
+│   ├── 创建对象的方法.html              # 创建对象的方法
+│   ├── 构造函数的参数.html              # 构造函数的参数
+│   ├── new关键字的作用.html             # new关键字的作用
+│   └── 深拷贝浅拷贝.html               # 深拷贝浅拷贝
+├── chapter5/                            # JavaScript 数组
+│   ├── 操作数组的基本操作.html          # 数组基本操作实践
+│   ├── 数组的基本操作.html              # 数组基本操作知识
+│   ├── 数组进阶操作方法.html          # 数组进阶操作方法
+│   └── 测试题.html                      # 数组知识测试
+├── chapter6/                            # JavaScript 运算符
+│   ├── 测试题.html                      # 运算符知识测试
+│   └── 运算符.html                     # 运算符详解
+├── chapter7/                            # JavaScript 函数
+│   ├── 函数.html                        # 函数基础与进阶
+│   └── 测试题.html                      # 函数知识测试
+├── chapter8/                            # JavaScript 闭包
+│   └── js闭包.html                      # 闭包概念与应用
+├── chapter9/                            # JavaScript 原型与类型检测
+│   ├── 原型的基本概念.html              # 原型基本概念
+│   ├── 原型链.html                      # 原型链详解
+│   ├── 手写插件.html                    # 手写插件实践
+│   └── 类型检测.html                    # 类型检测方法
+└── chapter10/                           # JavaScript JSON 与 AJAX
+    ├── JSON.html                        # JSON 数据格式详解
+    ├── TEST.json                        # JSON 测试文件
+    └── ajax.html                        # AJAX 异步请求
 ```
 
 ## 📚 学习内容
@@ -63,6 +80,33 @@ JS学习/
 - 📋 数组基本操作
 - 🚀 数组进阶操作
 - 📝 数组知识测试
+
+### 📒 第六章: JavaScript 运算符
+- ➕ 运算符基础与使用
+- 🧮 运算符优先级与结合性
+- 📝 运算符知识测试
+
+### 📓 第七章: JavaScript 函数
+- 📝 函数定义与调用
+- 🎁 函数参数与返回值
+- 🔄 函数作用域与闭包
+- 📝 函数知识测试
+
+### 📜 第八章: JavaScript 闭包
+- 📚 闭包概念与原理
+- 🛠️ 闭包应用场景
+- 📝 闭包优缺点分析
+
+### 📃 第九章: JavaScript 原型与类型检测
+- 🧩 原型基本概念
+- 🔗 原型链机制
+- 🛠️ 手写插件实践
+- 🧐 类型检测方法
+
+### 📄 第十章: JavaScript JSON 与 AJAX
+- 📊 JSON 数据格式解析
+- 🔄 AJAX 异步请求原理
+- 📝 实践与测试
 
 ## 🌟 项目特点
 

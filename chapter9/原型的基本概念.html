@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 原型的基本概念
+        // 每个函数都有一个prototype属性，这个属性指向一个对象
+        // 这个对象就是原型对象
+        // 原型对象的作用是：共享属性和方法
+        // 当我们访问一个对象的属性或方法时，会先在对象本身上查找
+        // 如果没有找到，会去原型对象上查找
+        // 如果还没有找到，就会去原型的原型上查找
+        // 以此类推，直到找到Object.prototype对象
+        // 如果Object.prototype对象上也没有找到，就会返回undefined
+        fun.prototype.b = 100;
+        // prototype是公共的祖先
+        function fun() {
+            this.a = 100;
+        }
+        var f = new fun();
+        var f2 = new fun();
+        document.writeln(f.b);
+        document.writeln(f2.b);
+        // 我想到和JAVA的继承很像
+        // 其实prototype就是JAVA的父类
+        // 每个对象都有一个__proto__属性，这个属性指向原型对象
+        // 方法放在原型里面可以节约内存
+        // 只有构造函数才可以修改原型
+        f.prototype.b = 300;
+        document.writeln(f.b);
+    </script>
+</body>
+
+</html>

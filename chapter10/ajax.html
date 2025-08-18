@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- AJAX 就是“用 JavaScript 偷偷跟服务器通信，不刷新页面，就能把数据拿回来或把数据发出去”的技术组合。 -->
+
+
+    <script>
+        var xhr;
+        //1.创建请求对象
+        // 兼容补丁,有标准用标准，没有标准就降级用老 IE 的 ActiveX 对象，保证任何浏览器都能发 AJAX。
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest(); // 现代浏览器（IE7+、Chrome、Firefox…）走这里
+        } else {
+            // 老版本浏览器（IE6、IE5）走这里
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        // 2.配置请求地址和方式
+        xhr.open("GET", "https://www.xdclass.net/", true);
+        // 方式,地址,是否异步
+        // xhr.open("POST", "https://www.kimi.com/chat/d2gt3olm2cish0h31cd0",true);
+        // 3.发送
+        xhr.send();
+        // 4.处理响应
+        xhr.onreadystatechange = function() {
+            // readyState == 4  → 请求已全部完成（数据已回来）
+            // status == 200    → 服务器返回 HTTP 200 OK
+            if (xhr.readyState == 4) { // 先确认“完成”
+                if (xhr.status == 200) {
+                    alert(xhr.responseText);
+                } else {
+                    alert("请求失败，状态码：" + xhr.status);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

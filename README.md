@@ -48,10 +48,16 @@ JS学习/
 │   ├── 原型链.html                      # 原型链详解
 │   ├── 手写插件.html                    # 手写插件实践
 │   └── 类型检测.html                    # 类型检测方法
-└── chapter10/                           # JavaScript JSON 与 AJAX
-    ├── JSON.html                        # JSON 数据格式详解
-    ├── TEST.json                        # JSON 测试文件
-    └── ajax.html                        # AJAX 异步请求
+├── chapter10/                           # JavaScript JSON 与 AJAX
+│   ├── JSON.html                        # JSON 数据格式详解
+│   ├── TEST.json                        # JSON 测试文件
+│   └── ajax.html                        # AJAX 异步请求
+└── chapter11/                           # JavaScript DOM 与事件
+    ├── DOM事件.html                     # DOM 事件详解
+    ├── DOM常见操作.html                 # DOM 常见操作实践
+    ├── DOM是什么.html                   # DOM 基础概念
+    ├── JS事件的机制.html               # JS 事件机制原理
+    └── JS里面的定时器.html             # JS 定时器使用
 ```
 
 ## 📚 学习内容
@@ -107,6 +113,12 @@ JS学习/
 - 📊 JSON 数据格式解析
 - 🔄 AJAX 异步请求原理
 - 📝 实践与测试
+
+### 📑 第十一章: JavaScript DOM 与事件
+- 📋 DOM 基础概念
+- 🛠️ DOM 常见操作
+- 📡 DOM 事件机制
+- ⏱️ JS 定时器使用
 
 ## 🌟 项目特点
 

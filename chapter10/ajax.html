@@ -22,7 +22,7 @@
             xhr = new ActiveXObject("Microsoft.XMLHTTP");
         }
         // 2.配置请求地址和方式
-        xhr.open("GET", "https://www.xdclass.net/", true);
+        xhr.open("GET", "https://apmplus.volces.com/settings/get/webpro?aid=566559", true);
         // 方式,地址,是否异步
         // xhr.open("POST", "https://www.kimi.com/chat/d2gt3olm2cish0h31cd0",true);
         // 3.发送
@@ -34,6 +34,11 @@
             if (xhr.readyState == 4) { // 先确认“完成”
                 if (xhr.status == 200) {
                     alert(xhr.responseText);
+                    // 解析 JSON 字符串
+                    var jsonObj = JSON.parse(xhr.responseText);
+                    console.log(jsonObj);
+
+
                 } else {
                     alert("请求失败，状态码：" + xhr.status);
                 }

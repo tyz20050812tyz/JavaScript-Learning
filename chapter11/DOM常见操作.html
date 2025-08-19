@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="hh">
+
+            我是h1
+        </h1>
+        <p class="pp">
+            我是p
+        </p>
+        <p class="pp">
+            我是pp
+        </p>
+    </div>
+    <script>
+        // 1.获取元素
+        var h1 = document.getElementsByTagName('h1')[0];
+        var h2 = document.getElementById('hh');
+        var h3 = document.getElementsByClassName('pp')[0];
+
+        var h4 = document.querySelector('#hh');
+        // 默认找第一个
+        var h5 = document.querySelector('.pp');
+        // 如果想找所有的
+        var h6 = document.querySelectorAll('.pp');
+        console.log(h1);
+        console.log(h2);
+        console.log(h3);
+        console.log(h4);
+        // 2.操作元素
+        // 2.1改变元素内容
+        h1.innerHTML = '你好';
+        // 2.2改变元素属性
+        h1.class = h2;
+        h1.id = '123';
+        // 2.3改变元素样式
+        h1.style.color = 'red';
+        // 3.添加删除元素
+        // 3.1创建元素
+        var newdiv = document.createElement('p');
+        newdiv.innerHTML = '我是新添加的p';
+        // 插入元素
+        document.body.append(newdiv);
+        h1.append(newdiv);
+        // 删除元素
+        h1.removeChild(newdiv);
+    </script>
+</body>
+
+</html>

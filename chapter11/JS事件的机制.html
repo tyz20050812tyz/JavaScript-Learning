@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="ul1">
+        我是一个列表
+        <li id="li1">1</li>
+
+
+    </ul>
+    <script>
+        var ul1 = document.getElementById('ul1');
+        var li1 = document.getElementById('li1');
+        ul1.addEventListener('click', function() {
+            alert('你点击了父元素');
+        })
+        li1.addEventListener('click', function() {
+                alert('你点击了子元素');
+            })
+            // 事件冒泡,事件捕获
+            // 事件冒泡: 子元素事件触发后,会冒泡到父元素,触发父元素的事件,先输出子元素事件,然后输出父元素事件
+            // 事件捕获: 父元素事件触发后,会捕获到子元素,触发子元素的事件,先输出父元素事件,然后输出子元素事件
+            // 第三个参数true: 事件捕获
+            // 第三个参数false: 事件冒泡
+        ul1.addEventListener('click', function() {
+            alert('你点击了父元素');
+        }, true)
+        li1.addEventListener('click', function() {
+                alert('你点击了子元素');
+            }, true)
+            // 事件委托: 利用事件冒泡,将事件绑定在父元素上,当子元素触发事件时,会冒泡到父元素,触发父元素的事件
+            // 事件委托: 利用事件冒泡,将事件绑定在父元素上,当子元素触发事件时,会冒泡到父元素,触发父元素的事件
+            // 事件委托的原理: 事件冒泡
+            // 事件委托的优势: 1. 减少事件绑定的次数,提高性能 2. 动态添加的元素,也可以绑定事件
+            // 事件委托的劣势: 事件处理函数中的this指向问题
+            // 如果想只有点击第二个才弹窗
+        ul1.addEventListener('click', function(e) {
+                if (e.target.textContent == '2') {
+                    alert('你点击了第二个元素');
+                }
+            })
+            // 如何停止事件冒泡
+        li1.addEventListener('click', function(e) {
+            alert('你点击了li元素');
+            e.stopPropagation();
+        })
+    </script>
+</body>
+
+</html>

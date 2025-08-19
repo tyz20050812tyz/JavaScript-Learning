@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 20%;
+            display: flex;
+            align-items: center;
+        }
+        
+        .container input {
+            width: 70%;
+        }
+        
+        .container button {
+            width: 30%;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text">
+        <button>点击我</button>
+    </div>
+    <script>
+        // 常见事件
+        // onchange 改变事件
+        // onclick 点击事件
+        // onmouseover 鼠标悬停事件
+        // onmouseout 鼠标移出事件
+        // onkeydown 键盘按下事件
+        // onkeyup 键盘松开事件
+        // onsubmit 提交事件
+        // onload 加载事件
+
+        var btn = document.querySelector('button');
+        // 点击事件
+        btn.onclick = function() {
+            alert('你好');
+        }
+        btn.onmouseover = function() {
+            btn.style.backgroundColor = 'red';
+        }
+        btn.onmouseout = function() {
+                btn.style.backgroundColor = 'white';
+            }
+            // 事件监听
+        btn.addEventListener('click', function() {
+                alert('你好');
+            })
+            // 监听第二种方法
+        function test1() {
+            alert('你好');
+        }
+        btn.addEventListener('click', test1);
+        // 事件移除
+        btn.removeEventListener('click', test1);
+        // onclick会被覆盖
+        btn.onclick = function() {
+                alert('你好2'); //会输出你好2
+            }
+            // 监听事件不会
+        btn.addEventListener('click', function() {
+            alert('你好3');
+        })
+        btn.addEventListener('mouseover', function() {
+
+            alert('鼠标悬浮');
+            btn.style.backgroundColor = 'red';
+        })
+    </script>
+</body>
+
+</html>

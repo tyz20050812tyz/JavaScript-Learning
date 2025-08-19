@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 定时器: 定时执行一段代码
+        // 定时器的分类:  setTimeout()  setInterval()
+        // setTimeout()  延迟执行
+        // setInterval()  定时执行
+        // 定时器的参数:  要执行的代码, 延迟的时间(单位: 毫秒)
+        // 定时器的返回值:  定时器的id
+        // 清除定时器:  clearTimeout()  clearInterval()
+        // 清除定时器的参数:  定时器的id
+        // 清除定时器的返回值:  没有返回值
+        // 定时器的注意事项:  定时器的代码会在全局作用域下执行, 所以定时器中的this指向window
+        // var timer = setTimeout(function() {
+        //         document.write('hello world1');
+        //     }, 2000)
+        // clearTimeout(timer);
+        var timer2 = setInterval(function() {
+                document.write('hello world2');
+            }, 1000)
+            // clearInterval(timer2);
+            // 实现一个定时器,1秒执行一次,5秒后清除
+        var timer3 = setTimeout(function() {
+            clearInterval(timer2);
+            alert('定时器清除了');
+            document.write('定时器清除了');
+
+        }, 5000)
+    </script>
+</body>
+
+</html>
